@@ -10,7 +10,9 @@ services:
       - 8080:8080
     networks:
       - app-network
-
+    depends_on:
+      - php
+      
   php:
     build:
       context: .
