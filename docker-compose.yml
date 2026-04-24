@@ -12,6 +12,7 @@ services:
       - app-network
     depends_on:
       - php
+      - php_test
       
   php:
     build:
@@ -20,6 +21,7 @@ services:
     working_dir: /var/www
     volumes:
       - .:/var/www
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - app-network
     depends_on:
@@ -55,6 +57,7 @@ services:
     working_dir: /var/www
     volumes:
       - .:/var/www
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - app-network
     depends_on:
