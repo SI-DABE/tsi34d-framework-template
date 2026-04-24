@@ -30,6 +30,11 @@ class Router
         return self::$instance;
     }
 
+    public static function reset(): void
+    {
+        self::$instance = null;
+    }
+
     public function addRoute(Route $route): Route
     {
         $this->routes[] = $route;

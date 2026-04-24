@@ -33,6 +33,14 @@ jobs:
       - name: PHPUnit Units test
         run: ./run test tests/Unit
 
+      - name: Integration Tests
+        run: |
+          if find tests/Integration -name '*Test.php' -print -quit | grep -q .; then
+            ./run test tests/Integration
+          else
+            echo "No integration tests found."
+          fi
+
   acceptance_tests:
     name: Acceptance Tests
     runs-on: ubuntu-latest
