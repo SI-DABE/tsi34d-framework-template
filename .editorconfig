@@ -7,11 +7,15 @@ root = true
 [*]
 charset = utf-8
 indent_size = 2
-indent_style = space # Use spaces for indentation
-end_of_line = lf # Line endings are LF (Unix-style)
-insert_final_newline = true # Insert a final newline at the end of the file
-trim_trailing_whitespace = true # Trim trailing whitespace at the end of lines
+# Use spaces for indentation
+indent_style = space
+# Line endings are LF (Unix-style)
+end_of_line = lf
+# Insert a final newline at the end of the file
+insert_final_newline = true
+# Trim trailing whitespace at the end of lines
+trim_trailing_whitespace = true
 
 # Set specific formatting options for HTML files
-[*.{html}]
+[*.{html,phtml}]
 indent_size = 4
